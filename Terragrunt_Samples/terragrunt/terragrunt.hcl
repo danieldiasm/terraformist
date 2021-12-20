@@ -24,3 +24,17 @@ terraform {
         ]
     }
 }
+
+# SAMPLE CODE - Instead of having provider on each package, this can be
+# used, haven't explored it very much yet, but I've added more on the intention
+# of documenting the "generate" block of terragrunt.
+# generate "provider" {
+#     path = "provider.tf"
+#     if_exists = "overwrite_terragrunt"
+#     contents = <<EOF
+#         provider "aws" {
+#             profile = "default"
+#             region = "us-east-1"
+#         }
+#     EOF
+# }
